@@ -24,6 +24,13 @@ theme: {
       'lg': '1024px',
       'xl': '1280px',
     },
+    theme: {
+      extend: {
+        fontFamily: {
+          jost: ['Jost', 'sans-serif'],
+        },
+      },
+    },
   },
 },
   plugins: [],
