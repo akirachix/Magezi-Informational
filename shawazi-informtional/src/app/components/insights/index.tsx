@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Insights from '../Atoms';
 
 const QuestionSection = () => {
@@ -32,19 +32,19 @@ const QuestionSection = () => {
   return (
     <div className="max-w-full md:mx-10 lg:mx-20 p-4 font-jost">
       <div className="flex items-center justify-center mb-4">
-    <div className="w-[500px] h-[2px] bg-primary mr-8"></div>
-  <h1 className="text-[35px]  text-primary mt-4 md:text-[32px] lg:text-[35px] font-bold mb-6 text-center">
-    Insights
-  </h1>
-  <div className="w-[500px] h-[2px] bg-primary ml-8"></div>
-  </div>
-  <h2 className="text-[25px] text-black font-jost md:text-[25px] lg:text-[25px] mb-4 text-center text-black">
-    Answers to questions about Shawazi
-  </h2>
-  {questions_answers.map((insight, index) => (
-    <Insights key={index} question={insight.question} answer={insight.answer} />
-  ))}
-</div>
+        <div className="w-[500px] h-[2px] bg-primary mr-8"></div>
+        <h1 className="text-3xl sm:text-5xl md:text-4xl lg:text-4xl font-bold text-primary mt-4 mb-6 text-center">
+          Insights
+        </h1>
+        <div className="w-[500px] h-[2px] bg-primary ml-8"></div>
+      </div>
+      <h2 className="text-lg sm:text-xl md:text-lg lg:text-lg mb-4 text-center text-black">
+        Answers to questions about Shawazi
+      </h2>
+      {questions_answers.map((insight, index) => (
+        <Insights key={index} question={insight.question} answer={insight.answer} />
+      ))}
+    </div>
   );
 };
 

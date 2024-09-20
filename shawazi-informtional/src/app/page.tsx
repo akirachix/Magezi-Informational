@@ -1,17 +1,19 @@
-// import Image from "next/image";
+import LandingPage from "./components/home";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer"
 import About from '@/app/components/about_us'
 import QuestionSection from './components/insights';
 
 
-export default function Home() {
+export default function Home(){
   return (
-    <div>
-      <main>
-       <About/> 
-       
-       <QuestionSection/>
-       
-      </main>
-    </div>
+    <main>
+        <Navbar/>
+        <LandingPage/>
+        <About/>
+        <QuestionSection/>
+        <Footer/>
+    </main>
+
   );
-}
+};

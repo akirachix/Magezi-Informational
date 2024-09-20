@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -12,14 +11,14 @@ const Insights = ({ question, answer }: InsightsProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border border-primary rounded-lg mb-4 mx-1  md:mx-2 lg:mx-3 font-jost">
+    <div className="border border-primary rounded-lg mb-4 mx-1 md:mx-2 lg:mx-3 font-jost">
       <button
         className="flex justify-between w-full p-4 text-left"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-controls="insights-answer"
       >
-        <span className="text-[24px] font-semibold md:text-[22px] lg:text-[25px]">
+        <span className="text-lg sm:text-xl md:text-lg lg:text-xl font-semibold">
           {question}
         </span>
         <RiArrowDropDownLine
@@ -30,7 +29,7 @@ const Insights = ({ question, answer }: InsightsProps) => {
       </button>
       {isOpen && (
         <div className="p-4 pt-0" id="insights-answer">
-          <p className="text-black text-[24px] md:text-[24px] lg:text-[24px]">
+          <p className="text-black text-base sm:text-lg md:text-base lg:text-lg">
             {answer}
           </p>
         </div>
