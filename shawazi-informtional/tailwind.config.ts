@@ -13,6 +13,13 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
     },
+    theme: {
+      extend: {
+        fontFamily: {
+          jost: ['Jost', 'sans-serif'],
+        },
+      },
+    },
   },
   plugins: [],
 };
