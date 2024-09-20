@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center ml-4 md:ml-12 mr-10">
           <img
-            src="/shawazilogo.png"
+            src="/images/shawazilogo.png"
             alt="logo"
             className="h-16 md:h-24 lg:h-32"
           />

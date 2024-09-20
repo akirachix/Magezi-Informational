@@ -9,10 +9,11 @@ const LandingPage = () => {
           className="flex flex-col md:flex-row items-stretch justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 mt-4"
         >
           <div className="flex-1 flex flex-col justify-center md:text-left md:ml-4 lg:ml-10">
-            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl xl:mb-1 2xl:text-7xl text-[#508408] font-bold mb-3 2xl:mb-16">
+            <h1 className="text-3xl sm:text-5xl md:text-4xl lg:text-4xl xl:text-5xl xl:mb-1 2xl:text-7xl text-[#508408] font-bold mb-3 2xl:mb-16">
               Transparent Land Transactions
             </h1>
             <div className="flex-grow flex flex-col justify-center">
+
               <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-xl xl:mb-1 2xl:text-3xl text-black mb-3 2xl:mb-16 md:text-left">
                 Experience a seamless and transparent process in land registration
                 and transactions. Empowering buyers and sellers with trust and
@@ -30,7 +31,7 @@ const LandingPage = () => {
           </div>
           <div className="flex-1 flex items-center justify-center md:justify-start md:mr-4 lg:mr-8">
             <img
-              src="/landpage.png"
+              src="/images/landpage.png"
               alt="Land Image"
               className="w-full h-full object-cover md:max-h-[400px] lg:max-h-[500px] 2xl:max-h-[600px] md:max-w-[100%] lg:max-w-[100%] 2xl:max-w-[100%] md:object-cover rounded-lg md:rounded-xl lg:rounded-2xl" // Adjusting border radius for larger screens
             />
