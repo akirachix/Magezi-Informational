@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Services = () => {
   return (
@@ -15,7 +16,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mt-24">
           <div className="flex items-start max-w-[600px]">
             <div className="mr-4 flex-shrink-0">
-              <img src="/search.png" alt="Search" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
+              <Image src="/search.png" alt="Search" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-1 text-secondary">Search</h3>
@@ -27,7 +28,7 @@ const Services = () => {
 
           <div className="flex items-start max-w-[600px]">
             <div className="mr-4 flex-shrink-0">
-              <img src="/contracts.png" alt="Contracts" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
+              <Image src="/contracts.png" alt="Contracts" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-1 text-secondary">Contracts</h3>
@@ -39,7 +40,7 @@ const Services = () => {
 
           <div className="flex items-start max-w-[600px] mt-[10%]">
             <div className="mr-4 flex-shrink-0">
-              <img src="/transactions.png" alt="Transactions" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
+              <Image src="/transactions.png" alt="Transactions" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-1 text-secondary">Transactions</h3>
@@ -51,7 +52,7 @@ const Services = () => {
 
           <div className="flex items-start max-w-[600px] mt-[10%]">
             <div className="mr-4 flex-shrink-0">
-              <img src="/negotiations.png" alt="Negotiations" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
+              <Image src="/negotiations.png" alt="Negotiations" className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" />
             </div>
             <div>
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-1 text-secondary">Negotiations</h3>

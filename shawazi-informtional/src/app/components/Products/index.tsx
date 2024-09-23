@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Products = () => {
   return (
@@ -30,7 +31,7 @@ const Products = () => {
 
         <div className="flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0 lg:space-x-8">
           <div className="w-full lg:w-1/3 flex justify-center lg:justify-start order-2 lg:order-1">
-            <img
+            <Image
               src="/laptop.png"
               alt="Laptop"
               className="w-auto h-48 sm:h-64 lg:h-80 object-contain"

@@ -1,5 +1,6 @@
 import React from 'react';
 import Insights from '../Atoms';
+import Image from 'next/image';
 
 const QuestionSection = () => {
   const questions_answers = [

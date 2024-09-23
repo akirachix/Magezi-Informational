@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 const ratingsData = [
   {
@@ -62,7 +63,7 @@ const Ratings = () => {
         </div>
         <div className="flex flex-col items-center justify-center mt-8">
           <div className="flex items-center gap-x-3 sm:gap-x-6">
-            <img src={ratingsData[currentIndex].image} alt={ratingsData[currentIndex].author} className="w-16 h-16 sm:w-20 sm:h-20 rounded-full mr-4" />
+            <Image src={ratingsData[currentIndex].image} alt={ratingsData[currentIndex].author} className="w-16 h-16 sm:w-20 sm:h-20 rounded-full mr-4" />
             <div className='text-[16px] sm:text-[25px]'>
               <p className="font-semibold">{ratingsData[currentIndex].author}</p>
               <p className="text-black">{ratingsData[currentIndex].role}</p>
