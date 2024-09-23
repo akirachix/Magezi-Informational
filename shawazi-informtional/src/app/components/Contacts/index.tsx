@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import { Check, Mail, Phone } from "lucide-react";
-const Contact = () => {
+const Contact= () => {
   return (
     <div className="px-2 sm:px-6 lg:px-40 py-4 sm:py-6 font-jost mt-10">
       <h1 className="font-bold text-center text-primary mb-2 sm:mb-3 text-lg sm:text-[30px]">

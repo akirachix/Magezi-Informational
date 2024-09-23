@@ -3,10 +3,12 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa';
+
 interface HamburgerMenuProps {
   isOpen: boolean;
   toggleMenu: () => void;
 }
+
 const HamburgerMenu = ({ isOpen, toggleMenu }: HamburgerMenuProps) => {
   return (
     <button
@@ -23,10 +25,13 @@ const HamburgerMenu = ({ isOpen, toggleMenu }: HamburgerMenuProps) => {
     </button>
   );
 };
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  
   const isActive = (href: string) => pathname === href;
+
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     event.preventDefault();
     setMenuOpen(false);
@@ -35,12 +40,15 @@ const Navbar = () => {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   const handleOverlayClick = () => {
     setMenuOpen(false);
   };
+
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
   };
+
   return (
     <header className="flex flex-col md:flex-row justify-between items-center p-4 mx-auto max-w-9xl bg-white relative">
       <div className="flex items-center justify-between w-full">
@@ -53,6 +61,7 @@ const Navbar = () => {
         </div>
         <HamburgerMenu isOpen={menuOpen} toggleMenu={toggleMenu} />
       </div>
+
       <nav className={`hidden md:flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 md:gap-8 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-amber-950 mr-16`}>
         {[
           { href: '/', label: 'Home' },
@@ -72,6 +81,7 @@ const Navbar = () => {
           </Link>
         ))}
       </nav>
+
       {menuOpen && (
         <>
           <div
@@ -106,4 +116,5 @@ const Navbar = () => {
     </header>
   );
 };
+
 export default Navbar;
