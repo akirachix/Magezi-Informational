@@ -5,13 +5,17 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+     
+
 theme: {
   extend: {
     colors: {
-      primary: '#3E1C00',
-      secondary: '#508408',
-      tertiary: '#3E1C00',
       background: "var(--background)",
+      primary: "#3E1C00", 
+      secondary: "#E4960E", 
+      hover: "#508408", 
+      white: "#FFFFFF", 
+      tertiary: '#3E1C00',
       foreground: "var(--foreground)",
     },
     screens: {
