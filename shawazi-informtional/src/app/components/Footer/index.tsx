@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -10,7 +11,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row items-stretch justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
                     <div className="flex-1 flex flex-col justify-center md:mr-4 lg:mr-10">
                         <div className="flex flex-col items-center md:items-start">
-                            <img 
+                            <Image 
                                 src="/images/shawazi-logo.png" 
                                 alt="Shawazi Logo" 
                                 className="w-[60%] max-w-[100px] mb-2 mt-10 md:max-w-[150px] lg:max-w-[150px] xl:max-w-[150px]" 
