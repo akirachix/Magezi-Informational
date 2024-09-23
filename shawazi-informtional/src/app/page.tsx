@@ -5,6 +5,10 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 import About from './components/about_us'
 import QuestionSection from './components/Insights';
+import Ratings from "./components/Ratings";
+import Contact from "./components/Contacts";
+import Testimonial from "./components/Testimonial";
+
 
 
 export default function Home(){
@@ -15,6 +19,9 @@ export default function Home(){
         <LandingPage/>
         <Products/>
         <Services/>
+        <Ratings />
+        <Contact />
+        <Testimonial />
         <About/>
         <QuestionSection/>
         <Footer/>
