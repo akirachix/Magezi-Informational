@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const About = () => {
   const teamMembers = [
     { name: "Brendah Khamali", role: "Software Developer", imgSrc: "/images/brenda.png" },
@@ -24,7 +26,7 @@ const About = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 md:gap-y-12 gap-x-12 mt-8">
         {firstGroup.map((member, index) => (
           <div key={index} className="flex flex-col items-center">
-            <img
+            <Image
               src={member.imgSrc}
               alt={member.name}
               className="h-60 w-60 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-lg object-cover"
@@ -39,7 +41,7 @@ const About = () => {
         <div className="grid grid-cols-1 gap-x-4 sm:grid-cols-2 gap-y-8 md:gap-y-12 md:gap-x-24 lg:gap-x-16 xl:gap-x-64">
           {secondGroup.map((member, index) => (
             <div key={index} className="flex flex-col items-center">
-              <img
+              <Image
                 src={member.imgSrc}
                 alt={member.name}
                 className="h-60 w-60 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-lg object-cover"

@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 
 const LandingPage = () => {
   return (
@@ -30,8 +31,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="flex-1 flex items-center justify-center md:justify-start md:mr-4 lg:mr-8">
-            <img
-              src="/images/landpage.png"
+            < Image src="/images/landpage.png"
               alt="Land Image"
               className="w-full h-full object-cover md:max-h-[400px] lg:max-h-[500px] 2xl:max-h-[600px] md:max-w-[100%] lg:max-w-[100%] 2xl:max-w-[100%] md:object-cover rounded-lg md:rounded-xl lg:rounded-2xl" // Adjusting border radius for larger screens
             />

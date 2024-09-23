@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 interface HamburgerMenuProps {
@@ -53,7 +54,7 @@ const Navbar = () => {
     <header className="flex flex-col md:flex-row justify-between items-center p-4 mx-auto max-w-9xl bg-white relative">
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center ml-4 md:ml-12 mr-10">
-          <img
+          <Image
             src="/images/shawazilogo.png"
             alt="logo"
             className="h-16 md:h-24 lg:h-32"
