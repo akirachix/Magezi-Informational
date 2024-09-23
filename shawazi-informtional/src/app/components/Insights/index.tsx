@@ -31,6 +31,8 @@ const QuestionSection = () => {
 
   return (
     <div className="max-w-full md:mx-10 lg:mx-20 p-4 font-jost">
+              <div id='Insights'> </div>
+
       <div className="flex items-center justify-center mb-4">
         <div className="w-[500px] h-[2px] bg-primary mr-8"></div>
         <h1 className="text-3xl sm:text-5xl md:text-4xl lg:text-4xl font-bold text-primary mt-4 mb-6 text-center">

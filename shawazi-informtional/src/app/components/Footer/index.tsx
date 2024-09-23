@@ -5,6 +5,8 @@ const Footer = () => {
     return (
         <footer className="font-jost bg-primary text-white">
             <div className="container mx-auto px-4 py-10 md:px-8 lg:px-10 xl:px-12">
+            <div id='Contacts'> </div>
+
                 <div className="flex flex-col md:flex-row items-stretch justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14">
                     <div className="flex-1 flex flex-col justify-center md:mr-4 lg:mr-10">
                         <div className="flex flex-col items-center md:items-start">
@@ -57,7 +59,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="border-t border-secondary mt-8 pt-8 pb-4 text-center mb-5">
+            <div className="border-t border-secondary mt-8 pt-8 text-center">
                 <p className="text-[18px]">© 2024 Shawazi Inc. All rights reserved</p>
             </div>
         </footer>

@@ -14,7 +14,7 @@ const HamburgerMenu = ({ isOpen, toggleMenu }: HamburgerMenuProps) => {
   return (
     <button
       onClick={toggleMenu}
-      className="md:hidden flex flex-col justify-center items-center space-y-1 z-50" 
+      className="md:hidden flex flex-col justify-center items-center space-y-1 z-50"
       aria-expanded={isOpen}
       aria-controls="mobile-menu"
     >
@@ -33,8 +33,13 @@ const Navbar = () => {
 
   const isActive = (href: string) => pathname === href;
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    event.preventDefault(); 
     setMenuOpen(false); 
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' }); 
+    }
   };
 
   const handleOverlayClick = () => {
@@ -60,19 +65,21 @@ const Navbar = () => {
       </div>
 
       <nav className={`hidden md:flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8 md:gap-8 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-amber-950 mr-16`}>
-        {['/', '/#products', '/#services', '/#about', '/#insights', '/#contacts'].map((href, index) => (
+        {[
+          { href: '/', label: 'Home' },
+          { href: '#Products', label: 'Products' },
+          { href: '#Services', label: 'Services' },
+          { href: '#About', label: 'About' },
+          { href: '#Insights', label: 'Insights' },
+          { href: '#Contacts', label: 'Contacts' }
+        ].map(({ href, label }, index) => (
           <Link
             key={index}
             href={href}
             className={`flex items-center gap-2 ${isActive(href) ? 'font-bold text-orange-500' : 'hover:text-orange-500'}`}
-            onClick={handleLinkClick}
+            onClick={(e) => handleLinkClick(e, href.substring(1))} 
           >
-            {index === 0 && 'Home'}
-            {index === 1 && 'Products'}
-            {index === 2 && 'Services'}
-            {index === 3 && 'About'}
-            {index === 4 && 'Insights'}
-            {index === 5 && 'Contacts'}
+            {label}
           </Link>
         ))}
       </nav>
@@ -85,19 +92,21 @@ const Navbar = () => {
             onClick={handleOverlayClick} 
           />
           <nav id="mobile-menu" className="fixed top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center bg-white bg-opacity-80 z-50 p-4 space-y-2 text-black">
-            {['/', '/#products', '/#services', '/#about', '/#insights', '/#contacts'].map((href, index) => (
+            {[
+              { href: '/', label: 'Home' },
+              { href: '#Products', label: 'Products' },
+              { href: '#Services', label: 'Services' },
+              { href: '#About', label: 'About' },
+              { href: '#Insights', label: 'Insights' },
+              { href: '#Contacts', label: 'Contacts' }
+            ].map(({ href, label }, index) => (
               <Link
                 key={index}
                 href={href}
                 className={`flex items-center gap-2 text-base sm:text-lg md:text-xl py-2 ${isActive(href) ? 'font-bold text-orange-500' : 'hover:text-orange-500'}`}
-                onClick={handleLinkClick}
+                onClick={(e) => handleLinkClick(e, href.substring(1))} 
               >
-                {index === 0 && 'Home'}
-                {index === 1 && 'Products'}
-                {index === 2 && 'Services'}
-                {index === 3 && 'About'}
-                {index === 4 && 'Insights'}
-                {index === 5 && 'Contacts'}
+                {label}
               </Link>
             ))}
           </nav>

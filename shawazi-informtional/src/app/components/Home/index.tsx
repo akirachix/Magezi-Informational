@@ -3,7 +3,7 @@
 const LandingPage = () => {
   return (
     <>
-      <main className="h-screen p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 bg-gray-100 flex flex-col items-center mx-auto max-w-9xl mb-4 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10">
+      <main className=" p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 bg-white flex flex-col items-center mx-auto max-w-9xl mb-90 sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10">
         <div
           id="home"
           className="flex flex-col md:flex-row items-stretch justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-14 mt-4"
